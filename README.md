@@ -32,5 +32,17 @@ The database sessions are managed through SQLAlchemy. The get_db function yields
 Authentication
 The API uses JWT-based authentication. Obtain an authentication token by making a POST request to the /auth endpoint with valid credentials.
 
+Testing Documentation
+The testign documentation for the given test cases and edge cases are provided in the app/test_case check it out for the testing documentation
+
 API Documentation
 The API documentation is available at http://localhost:8000/docs when the server is running. Use this interface to explore and test the available endpoints.
+
+Bonus Points
+To validate the authenticity of requests, a dedicated validation method/service has been implemented. This service checks the integrity and expiration of the JWT token, ensuring that only authorized users with valid tokens can interact with sensitive APIs. This two-step process adds an extra layer of security, safeguarding the API against unauthorized access and potential security threats.
+
+This authentication/authorization system allows for fine-grained control over who can access different parts of the API, providing a secure and reliable environment for managing book-related operations.
+
+Serverless Application
+
+
