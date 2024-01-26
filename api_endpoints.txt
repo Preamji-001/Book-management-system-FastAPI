@@ -1,0 +1,107 @@
+Authentication Endpoints
+1. User Login
+Endpoint: http://localhost:8000/login
+Method: POST
+Description: Authenticates a user and provides an access token.
+Request Body:
+username: User's email address.
+password: User's password.
+Responses:
+201 Created: Returns an access token and token type on successful authentication.
+404 Not Found: Invalid credentials.
+Example:
+
+bash
+Copy code
+curl -X POST "http://localhost:8000/login" -d "username=testuser@example.com&password=testpassword&scope=token"
+Books Endpoints
+1. Get All Books
+Endpoint: http://localhost:8000/book/
+Method: GET
+Description: Retrieves a list of all books.
+Responses:
+200 OK: Returns a list of books.
+Example:
+
+bash
+Copy code
+curl "http://localhost:8000/book/"
+2. Create a Book
+Endpoint: http://localhost:8000/book/
+Method: POST
+Description: Creates a new book.
+Request Body:
+Provide details of the book (e.g., title, author, isbn).
+Responses:
+201 Created: Returns the created book.
+400 Bad Request: Book with the same ISBN already exists.
+Example:
+
+bash
+Copy code
+curl -X POST "http://localhost:8000/book/" -d "title=Example Book&author=John Doe&isbn=1234567890"
+3. Get a Single Book
+Endpoint: http://localhost:8000/book/{id}
+Method: GET
+Description: Retrieves details of a specific book by ID.
+Responses:
+200 OK: Returns the book details.
+404 Not Found: Book with the given ID was not found.
+Example:
+
+bash
+Copy code
+curl "http://localhost:8000/book/1"
+4. Delete a Book
+Endpoint: http://localhost:8000/book/{id}
+Method: DELETE
+Description: Deletes a book by ID.
+Responses:
+200 OK: Book deleted successfully.
+404 Not Found: Book with the given ID was not found.
+Example:
+
+bash
+Copy code
+curl -X DELETE "http://localhost:8000/book/1"
+5. Update a Book
+Endpoint: http://localhost:8000/book/{id}
+Method: PUT
+Description: Updates details of a specific book by ID.
+Request Body:
+Provide updated details of the book (e.g., title, author).
+Responses:
+200 OK: Returns the updated book.
+404 Not Found: Book with the given ID was not found.
+Example:
+
+bash
+Copy code
+curl -X PUT "http://localhost:8000/book/1" -d "title=Updated Title&author=Updated Author"
+Users Endpoints
+1. Create a User
+Endpoint: http://localhost:8000/user/
+Method: POST
+Description: Creates a new user account.
+Request Body:
+Provide user details (e.g., username, password).
+Responses:
+201 Created: User account created successfully.
+Example:
+
+bash
+Copy code
+curl -X POST "http://localhost:8000/user/" -d "username=testuser&password=testpassword"
+2. Get User Profile
+Endpoint: http://localhost:8000/user/{id}
+Method: GET
+Description: Retrieves details of a specific user by ID.
+Responses:
+200 OK: Returns the user profile.
+404 Not Found: User with the given ID was not found.
+Example:
+
+bash
+Copy code
+curl "http://localhost:8000/user/1"
+Please use these examples for reference, and adjust them based on your specific requirements and API setup.
