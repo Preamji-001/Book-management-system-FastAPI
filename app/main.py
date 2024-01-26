@@ -14,7 +14,7 @@ app = FastAPI()
   
 while True:
     try:
-        conn = psycopg2.connect(host= 'localhost',database='bms',user='postgres',password='0000', cursor_factory=RealDictCursor)
+        conn = psycopg2.connect(host= 'localhost',database='bms',user='preamji',password='0000', cursor_factory=RealDictCursor)
         cursor=conn.cursor()
         print("database connected")
         break
