@@ -1,0 +1,36 @@
+BookCreate (Request Body for Creating a Book)
+Check out schemas.py for details
+Properties:
+title (str): Title of the book.
+author (str): Author of the book.
+isbn (int): ISBN (International Standard Book Number) of the book.
+price (int): Price of the book.
+quantity (int): Quantity of the book.
+BookFromServer (Response Model for Book Details)
+Properties:
+id (int): Unique identifier for the book.
+title (str): Title of the book.
+author (str): Author of the book.
+isbn (int): ISBN of the book.
+price (int): Price of the book.
+quantity (int): Quantity of the book.
+created_at (datetime): Timestamp indicating when the book was created.
+UserCreate (Request Body for Creating a User)
+Properties:
+email (EmailStr): Email address of the user.
+password (str): Password for the user.
+UserProfileFromServer (Response Model for User Profile)
+Properties:
+id (int): Unique identifier for the user.
+email (EmailStr): Email address of the user.
+UserLogin (Request Body for User Login)
+Properties:
+email (EmailStr): Email address of the user.
+password (str): Password for user login.
+Token (Response Model for Token)
+Properties:
+Access_Token (str): Access token for authentication.
+Token_Type (str): Type of the token (e.g., "Bearer").
+TokenData (Token Payload)
+Properties:
+email_address (EmailStr): Email address extracted from the token data.

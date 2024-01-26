@@ -43,6 +43,5 @@ To validate the authenticity of requests, a dedicated validation method/service 
 
 This authentication/authorization system allows for fine-grained control over who can access different parts of the API, providing a secure and reliable environment for managing book-related operations.
 
-Serverless Application
-
-
+Results
+Check out the images section Under app to find about working of the data api and tested edge cases
